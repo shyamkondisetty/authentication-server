@@ -40,7 +40,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 			for(int i=0;i<rolesList.size();i++){
 				Role role=rolesList.get(i);
 				for (int j=0;j<role.getPermissions().size();j++){
-					permissionsList.add("ROLE"+role.getPermissions().get(j).getName());
+					permissionsList.add("ROLE_"+role.getPermissions().get(j).getName());
 				}
 			}
 
