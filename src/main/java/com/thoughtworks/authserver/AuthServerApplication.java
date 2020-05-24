@@ -1,11 +1,11 @@
 package com.thoughtworks.authserver;
 
-import com.thoughtworks.authserver.seeding.models.Permission;
-import com.thoughtworks.authserver.seeding.models.Role;
-import com.thoughtworks.authserver.seeding.models.User;
-import com.thoughtworks.authserver.seeding.service.PermissionService;
-import com.thoughtworks.authserver.seeding.service.RoleService;
-import com.thoughtworks.authserver.seeding.service.UserService;
+import com.thoughtworks.authserver.Permission.Permission;
+import com.thoughtworks.authserver.Role.Role;
+import com.thoughtworks.authserver.User.User;
+import com.thoughtworks.authserver.Permission.PermissionService;
+import com.thoughtworks.authserver.Role.RoleService;
+import com.thoughtworks.authserver.User.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

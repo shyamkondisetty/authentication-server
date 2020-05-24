@@ -1,4 +1,4 @@
-package com.thoughtworks.authserver.seeding.models;
+package com.thoughtworks.authserver.Permission;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

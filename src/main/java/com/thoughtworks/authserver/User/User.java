@@ -1,4 +1,6 @@
-package com.thoughtworks.authserver.seeding.models;
+package com.thoughtworks.authserver.User;
+
+import com.thoughtworks.authserver.Role.Role;
 
 import javax.persistence.*;
 import java.util.List;

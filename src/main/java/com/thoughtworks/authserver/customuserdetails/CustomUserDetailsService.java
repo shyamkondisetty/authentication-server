@@ -1,8 +1,8 @@
-package com.thoughtworks.authserver.service;
+package com.thoughtworks.authserver.customuserdetails;
 
-import com.thoughtworks.authserver.seeding.models.Role;
-import com.thoughtworks.authserver.seeding.models.User;
-import com.thoughtworks.authserver.seeding.service.UserService;
+import com.thoughtworks.authserver.Role.Role;
+import com.thoughtworks.authserver.User.User;
+import com.thoughtworks.authserver.User.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,9 +10,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import com.thoughtworks.authserver.model.CustomUser;
-import com.thoughtworks.authserver.model.UserEntity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -61,20 +58,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 		} catch (Exception e) {
 			throw new UsernameNotFoundException("User " + username + " was not found in the database");
 		}
-
-
-//		try {
-//			userEntity = oauthDAOService.getUserDetails(username);
-//
-//			if (userEntity != null && userEntity.getId() != null && !"".equalsIgnoreCase(userEntity.getId())) {
-//				CustomUser customUser = new CustomUser(userEntity);
-//				return customUser;
-//			} else {
-//				throw new UsernameNotFoundException("User " + username + " was not found in the database");
-//			}
-//		} catch (Exception e) {
-//			throw new UsernameNotFoundException("User " + username + " was not found in the database");
-//		}
 
 	}
 

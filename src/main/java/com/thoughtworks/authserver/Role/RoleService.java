@@ -1,7 +1,7 @@
-package com.thoughtworks.authserver.seeding.service;
+package com.thoughtworks.authserver.Role;
 
-import com.thoughtworks.authserver.seeding.models.Role;
-import com.thoughtworks.authserver.seeding.repository.RoleRepository;
+import com.thoughtworks.authserver.Role.Role;
+import com.thoughtworks.authserver.Role.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

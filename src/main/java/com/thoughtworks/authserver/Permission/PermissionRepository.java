@@ -1,6 +1,5 @@
-package com.thoughtworks.authserver.seeding.repository;
+package com.thoughtworks.authserver.Permission;
 
-import com.thoughtworks.authserver.seeding.models.Permission;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

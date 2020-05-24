@@ -1,4 +1,4 @@
-package com.thoughtworks.authserver.model;
+package com.thoughtworks.authserver.customuserdetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
