@@ -59,13 +59,19 @@ public class AuthServerApplication {
 					18000,
 					new ArrayList<String>(Arrays.asList("ROLE_ADMIN"))
 					);
+			customClientService.create(customClientOne);
 
-//			System.out.println(customClientOne.toString());
-//
-			System.out.println(customClientService.create(customClientOne));
-//
-//			ClientDetails fetchedCustomClientOne=customClientService.loadClientByClientId("adminclient");
-//			System.out.println("fetchedCustomClientOne  ----->"+fetchedCustomClientOne);
+			CustomClient customClientTwo=new CustomClient(
+					"serviceclient",
+					"$2a$10$q/LAw1TCNgLwdFWeZpC4weojmWwjgkIVCFtcOIyzN6tWeJnI6Zkg.",
+					new HashSet<String>(Arrays.asList("read", "write")),
+					new HashSet<String>(Arrays.asList("password", "refresh_token")),
+					3600,
+					18000,
+					new ArrayList<String>(Arrays.asList("ROLE_CLIENT"))
+			);
+			customClientService.create(customClientTwo);
+
 		};
 	}
 
