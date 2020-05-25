@@ -1,5 +1,6 @@
 package com.thoughtworks.authserver.config;
 
+import com.thoughtworks.authserver.customclientdetails.CustomClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,6 +34,9 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 	PasswordEncoder passwordEncoder;
 
 	@Autowired
+	CustomClientService customClientService;
+
+	@Autowired
 	@Qualifier("authenticationManagerBean")
 	private AuthenticationManager authenticationManager;
 
@@ -43,9 +47,10 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory().withClient(clientid).secret(passwordEncoder.encode(clientSecret)).scopes("read", "write")
-				.authorizedGrantTypes("password", "refresh_token").accessTokenValiditySeconds(3600)
-				.refreshTokenValiditySeconds(18000);
+//		clients.inMemory().withClient(clientid).secret(passwordEncoder.encode(clientSecret)).scopes("read", "write")
+//				.authorizedGrantTypes("password", "refresh_token").accessTokenValiditySeconds(3600)
+//				.refreshTokenValiditySeconds(18000);
+		clients.withClientDetails(customClientService);
 	}
 
 	@Override
