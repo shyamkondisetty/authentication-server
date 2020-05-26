@@ -55,7 +55,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints.authenticationManager(authenticationManager).tokenStore(tokenStore())
+		endpoints.authenticationManager(authenticationManager).pathMapping("/oauth/hello", "/hello").tokenStore(tokenStore())
 				.accessTokenConverter(tokenEnhancer());
 	}
 
