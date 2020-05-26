@@ -45,6 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.httpBasic()
 				.and()
 				.authorizeRequests()
+				.antMatchers("/hello").access("hasRole('ROLE_ADMIN')")
 				.antMatchers("/oauth/**")
 				.authenticated()
 				.and()

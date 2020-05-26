@@ -33,7 +33,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         ClientDetails client=customClientService.loadClientByClientId(username);
         if (client.getClientId().equals(username) && passwordEncoder.matches(password,client.getClientSecret())) {
             return new UsernamePasswordAuthenticationToken
-                    (username, password, Collections.emptyList());
+                    (username, password, client.getAuthorities());
         } else {
             throw new
                     BadCredentialsException("External system authentication failed");
