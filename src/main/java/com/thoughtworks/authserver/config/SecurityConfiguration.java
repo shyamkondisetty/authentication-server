@@ -4,6 +4,7 @@ import com.thoughtworks.authserver.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -44,8 +45,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 		http.httpBasic()
 				.and()
+				.csrf().disable()
 				.authorizeRequests()
-				.antMatchers("/hello").access("hasRole('ROLE_ADMIN')")
+				.antMatchers(HttpMethod.POST,"/client/create").access("hasRole('ROLE_ADMIN')")
 				.antMatchers("/oauth/**")
 				.authenticated()
 				.and()

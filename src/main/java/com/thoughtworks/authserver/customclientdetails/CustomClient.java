@@ -20,7 +20,7 @@ public class CustomClient implements ClientDetails {
     private int accessTokenValiditySeconds;
     private int refreshTokenValiditySeconds;
     @ElementCollection(fetch = FetchType.EAGER)
-    private List<String> authorities;
+    private List<String> authorities=new ArrayList<>();
 
     public CustomClient(String id,
                         String secret,
