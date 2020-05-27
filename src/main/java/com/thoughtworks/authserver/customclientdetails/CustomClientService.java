@@ -6,18 +6,25 @@ import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.ClientRegistrationException;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CustomClientService implements ClientDetailsService {
     @Autowired
     CustomClientRepository customClientRepository;
 
-    public CustomClient create(CustomClient customClient){
+    public CustomClient create(CustomClient customClient) {
         return customClientRepository.save(customClient);
     }
 
 
     @Override
     public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
-        return customClientRepository.findById(clientId).get();
+        Optional<CustomClient> customClient = customClientRepository.findById(clientId);
+        if (!customClient.isPresent()) {
+            throw new ClientRegistrationException("client is invalid");
+        }
+        return customClient.get();
     }
+
 }
