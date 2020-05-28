@@ -1,6 +1,6 @@
 package com.thoughtworks.authserver.config;
 
-import com.thoughtworks.authserver.CustomAuthenticationProvider;
+//import com.thoughtworks.authserver.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,14 +25,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	CustomUserDetailsService customUserDetailsService;
 
-	@Autowired
-	CustomAuthenticationProvider customAuthenticationProvider;
+//	@Autowired
+//	CustomAuthenticationProvider customAuthenticationProvider;
 
 	@Override
 	@Autowired
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(customUserDetailsService).passwordEncoder(encoder());
-		auth.authenticationProvider(customAuthenticationProvider);
+//		auth.authenticationProvider(customAuthenticationProvider);
 	}
 
 	@Bean
