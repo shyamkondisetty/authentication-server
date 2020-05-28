@@ -1,6 +1,5 @@
 package com.thoughtworks.authserver.customuserdetails;
 
-import com.thoughtworks.authserver.customuserdetails.UserEntity;
 import org.springframework.security.core.userdetails.User;
 
 public class CustomUser extends User {

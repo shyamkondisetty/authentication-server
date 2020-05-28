@@ -1,7 +1,5 @@
 package com.thoughtworks.authserver.Permission;
 
-import com.thoughtworks.authserver.Permission.Permission;
-import com.thoughtworks.authserver.Permission.PermissionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

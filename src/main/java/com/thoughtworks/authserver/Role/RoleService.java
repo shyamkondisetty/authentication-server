@@ -1,7 +1,5 @@
 package com.thoughtworks.authserver.Role;
 
-import com.thoughtworks.authserver.Role.Role;
-import com.thoughtworks.authserver.Role.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

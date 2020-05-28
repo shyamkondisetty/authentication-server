@@ -1,6 +1,5 @@
 package com.thoughtworks.authserver.resourceserver;
 
-import com.thoughtworks.authserver.resourceserver.AccessTokenMapper;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.JwtAccessTokenConverterConfigurer;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;

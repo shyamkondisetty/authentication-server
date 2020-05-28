@@ -1,7 +1,5 @@
 package com.thoughtworks.authserver.User;
 
-import com.thoughtworks.authserver.User.User;
-import com.thoughtworks.authserver.User.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

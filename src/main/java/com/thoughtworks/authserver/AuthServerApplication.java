@@ -7,17 +7,11 @@ import com.thoughtworks.authserver.Permission.PermissionService;
 import com.thoughtworks.authserver.Role.RoleService;
 import com.thoughtworks.authserver.User.UserService;
 import com.thoughtworks.authserver.customclientdetails.CustomClient;
-//import com.thoughtworks.authserver.customclientdetails.CustomClientService;
 import com.thoughtworks.authserver.customclientdetails.CustomClientService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.security.oauth2.provider.ClientDetails;
 
 import java.util.ArrayList;
 import java.util.Arrays;
