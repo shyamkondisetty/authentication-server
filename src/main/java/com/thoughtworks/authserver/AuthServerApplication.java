@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.provider.ClientDetails;
 
 import java.util.ArrayList;
@@ -23,7 +24,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 @SpringBootApplication
-@EnableAuthorizationServer
 public class AuthServerApplication {
 
 	public static void main(String[] args) {
