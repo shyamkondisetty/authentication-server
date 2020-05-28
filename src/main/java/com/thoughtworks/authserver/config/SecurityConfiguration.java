@@ -47,9 +47,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //				.csrf().disable()
 				.authorizeRequests()
 //				.antMatchers(HttpMethod.POST,"/client/create").access("hasRole('ROLE_ADMIN')")
-				.antMatchers("/oauth/**")
-				.authenticated()
-				.anyRequest().permitAll()
+//				.antMatchers("/oauth/**")
+				.anyRequest().authenticated()
 				.and()
 				.sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.NEVER);
